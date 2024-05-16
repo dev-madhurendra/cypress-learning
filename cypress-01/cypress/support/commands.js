@@ -46,19 +46,19 @@ Cypress.Commands.add('clickLink',(label)=>{
 
 //Over write contains() 
 
-Cypress.Commands.overwrite('contains',(originalFn, subject, filter, text, options = {})=>{
-    // determine if a filter argument was passed
-    if (typeof text === 'object') {
-        options = text
-        text = filter
-        filter = undefined
-    }
+// Cypress.Commands.overwrite('contains',(originalFn, subject, filter, text, options = {})=>{
+//     // determine if a filter argument was passed
+//     if (typeof text === 'object') {
+//         options = text
+//         text = filter
+//         filter = undefined
+//     }
 
-    options.matchCase = false
+//     options.matchCase = false
 
-    return originalFn(subject, filter, text, options)
+//     return originalFn(subject, filter, text, options)
 
-})
+// })
 
 //Custom comamnd for login
 
